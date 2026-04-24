@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Cursos y Recursos de Ingeniería Civil</title>
+<title>Cursos Ingeniería Civil</title>
 
 <style>
 body{
@@ -12,91 +12,211 @@ body{
   font-family:Segoe UI,Arial;
   background:#0b1020;
   color:white;
-  user-select:none;
 }
+
+/* CONTENEDOR */
 .wrap{
-  max-width:900px;
+  max-width:1100px;
   margin:auto;
   padding:30px;
+  animation: fadeIn 0.6s ease;
 }
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* TARJETAS GLASS */
 .card{
-  background:#11172a;
-  padding:20px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding:25px;
   border-radius:15px;
   margin-bottom:20px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.08);
 }
-h1{
-  margin:0;
-}
+
+/* TEXTO */
 .desc{
-  color:#aab3ff;
+  color:#cfd6ff;
   line-height:1.6;
 }
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:15px;
+  text-align:left;
+}
+
+/* BOTONES */
 .btn{
-  display:block;
   padding:15px;
-  margin-top:10px;
-  background:#1c2540;
+  background: rgba(255,255,255,0.05);
   border-radius:10px;
+  cursor:pointer;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.btn:hover{
+  background: rgba(0,140,255,0.15);
+  box-shadow: 0 0 10px rgba(0,140,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* SUBMENU */
+.submenu{
+  max-height:0;
+  overflow:hidden;
+  transition:0.3s ease;
+}
+
+/* SUBBOTONES */
+.subbtn{
+  display:block;
+  padding:10px;
+  margin-top:6px;
+  background: rgba(255,255,255,0.04);
+  border-radius:8px;
+  font-size:14px;
   text-decoration:none;
-  color:white;
+  color:#dfe6ff;
+  border:1px solid rgba(255,255,255,0.05);
   transition:0.2s;
 }
-.btn:hover{
-  background:#2a3560;
+
+.subbtn:hover{
+  background: rgba(0,140,255,0.2);
+}
+
+/* LINKS */
+.links-box{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.links-box a{
+  display:block;
+  padding:15px;
+  background: rgba(255,255,255,0.05);
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.links-box a:hover{
+  background: rgba(0,140,255,0.15);
+  box-shadow: 0 0 10px rgba(0,140,255,0.3);
+}
+
+/* SEPARACIÓN */
+.group{
+  margin-bottom:18px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.group:last-child{
+  border-bottom:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
-<body oncontextmenu="return false;">
+<body>
 
 <div class="wrap">
 
-<!-- TITULO -->
+<!-- TEXTO ARRIBA -->
 <div class="card">
 <h1>🚀 Fuente Oficial y Aviso de Distribución</h1>
-</div>
 
-<!-- DESCRIPCION -->
-<div class="card">
 <p class="desc">
-Este archivo está incluido dentro del paquete para identificar claramente los canales oficiales
-y recursos disponibles.<br><br>
+Este archivo está incluido dentro del paquete para identificar claramente los canales oficiales y recursos disponibles.<br><br>
 
-Aquí encontrarás acceso a cursos, software, diplomados y contenido exclusivo
-relacionado con ingeniería civil, BIM y áreas afines.<br><br>
+Aquí encontrarás acceso a cursos, software, diplomados y contenido exclusivo relacionado con ingeniería civil, BIM y áreas afines.<br><br>
 
-Se recomienda utilizar versiones oficiales para apoyar a los desarrolladores.
+🚀Confirma tu Suscripción en el canal de 𝗬𝗢𝗨𝗧𝗨𝗕𝗘 y Reclama acceso a los archivos de instalación ahora con el administrador aquí abajo.🚀<br><br>
 
-🚀Confirma tu Suscripción en el canal de YouTube y Reclama acceso a los archivos de instalación ahora con el administrador aquí abajo.🚀
+🚀 Confirma tu suscripción y reclama acceso con el administrador.
 </p>
 </div>
 
-<!-- BOTONES -->
+<!-- GRID -->
 <div class="card">
+<div class="grid">
 
-<a class="btn" href="http://t.me/engineeringeyes_bot" target="_blank">
-📢 Administrador Oficial
-</a>
+<!-- PRIMERA COLUMNA -->
+<div class="links-box">
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank">📢 Ingreso Directo</a>
+  <a href="http://t.me/engineeringeyes_bot" target="_blank">📢 Administrador Oficial</a>
+  <a href="http://t.me/engineeringeyes_bot" target="_blank">🌐 Sitio Oficial</a>
+</div>
 
-<a class="btn" href="http://t.me/engineeringeyes_bot" target="_blank">
-🌐 Sitio Oficial
-</a>
+<!-- GEO5 + REVIT -->
+<div>
 
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('geo')">📁 Geo5</div>
+    <div id="geo" class="submenu">
+      <a href="https://go.hotmart.com/U102298220W" target="_blank" class="subbtn">Geo5 2025</a>
+      <a href="https://go.hotmart.com/U102298220W" target="_blank" class="subbtn">Geo5 2025</a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('revit')">📁 Revit</div>
+    <div id="revit" class="submenu">
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2025</a>
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2026</a>
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2027</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ETABS -->
+<div>
+  <div class="btn" onclick="toggleMenu('etabs')">📁 ETABS</div>
+  <div id="etabs" class="submenu">
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">ETABS 22</a>
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">ETABS 23</a>
+  </div>
+</div>
+
+<!-- CYPECAD -->
+<div>
+  <div class="btn" onclick="toggleMenu('cype')">📁 Cypecad</div>
+  <div id="cype" class="submenu">
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Cypecad 2019</a>
+    <a href="https://go.hotmart.com/T103068841P?dp=1" target="_blank" class="subbtn">Cypecad 2026.c</a>
+  </div>
+</div>
+
+</div>
 </div>
 
 </div>
 
-<!-- PROTECCION BASICA -->
 <script>
-// bloquear copiar
-document.addEventListener("copy", e => e.preventDefault());
-
-// bloquear teclas (F12, inspeccionar)
-document.onkeydown = function(e) {
-  if (e.keyCode == 123) return false;
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 73) return false;
-};
+function toggleMenu(id){
+  let menu = document.getElementById(id);
+  menu.style.maxHeight = menu.style.maxHeight ? null : menu.scrollHeight + "px";
+}
 </script>
 
 </body>
