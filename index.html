@@ -27,91 +27,16 @@ body{
   to{opacity:1; transform:translateY(0);}
 }
 
-/* ===== GLASS BASE (fallback seguro) ===== */
+/* TARJETAS GLASS */
 .card{
   background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding:25px;
   border-radius:15px;
   margin-bottom:20px;
   text-align:center;
   border:1px solid rgba(255,255,255,0.08);
-}
-
-.btn{
-  padding:15px;
-  background: rgba(255,255,255,0.05);
-  border-radius:10px;
-  cursor:pointer;
-  transition:0.25s;
-  border:1px solid rgba(255,255,255,0.08);
-}
-
-.subbtn{
-  display:block;
-  padding:10px;
-  margin-top:6px;
-  background: rgba(255,255,255,0.04);
-  border-radius:8px;
-  font-size:14px;
-  text-decoration:none;
-  color:#dfe6ff;
-  border:1px solid rgba(255,255,255,0.05);
-  transition:0.2s;
-}
-
-.links-box a{
-  display:block;
-  padding:15px;
-  background: rgba(255,255,255,0.05);
-  border-radius:10px;
-  color:white;
-  text-decoration:none;
-  transition:0.25s;
-  border:1px solid rgba(255,255,255,0.08);
-}
-
-/* ===== GLASS PREMIUM (solo si es compatible) ===== */
-@supports ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
-
-  body{
-    background: linear-gradient(135deg, #0b1020, #1a2340);
-  }
-
-  .card{
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border:1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 10px 40px rgba(0,140,255,0.15);
-  }
-
-  .btn{
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border:1px solid rgba(255,255,255,0.15);
-  }
-
-  .subbtn{
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(8px);
-  }
-
-  .links-box a{
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-  }
-}
-
-/* HOVER */
-.btn:hover,
-.links-box a:hover{
-  background: rgba(0,140,255,0.15);
-  box-shadow: 0 0 10px rgba(0,140,255,0.3);
-  transform: translateY(-2px);
-}
-
-.subbtn:hover{
-  background: rgba(0,140,255,0.2);
 }
 
 /* TEXTO */
@@ -128,6 +53,22 @@ body{
   text-align:left;
 }
 
+/* BOTONES */
+.btn{
+  padding:15px;
+  background: rgba(255,255,255,0.05);
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.btn:hover{
+  background: rgba(0,140,255,0.15);
+  box-shadow: 0 0 10px rgba(0,140,255,0.3);
+  transform: translateY(-2px);
+}
+
 /* SUBMENU */
 .submenu{
   max-height:0;
@@ -135,11 +76,45 @@ body{
   transition:0.3s ease;
 }
 
+/* SUBBOTONES */
+.subbtn{
+  display:block;
+  padding:10px;
+  margin-top:6px;
+  background: rgba(255,255,255,0.04);
+  border-radius:8px;
+  font-size:14px;
+  text-decoration:none;
+  color:#dfe6ff;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.2s;
+}
+
+.subbtn:hover{
+  background: rgba(0,140,255,0.2);
+}
+
 /* LINKS */
 .links-box{
   display:flex;
   flex-direction:column;
   gap:10px;
+}
+
+.links-box a{
+  display:block;
+  padding:15px;
+  background: rgba(255,255,255,0.05);
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.links-box a:hover{
+  background: rgba(0,140,255,0.15);
+  box-shadow: 0 0 10px rgba(0,140,255,0.3);
 }
 
 /* SEPARACIÓN */
@@ -166,6 +141,7 @@ body{
 
 <div class="wrap">
 
+<!-- TEXTO ARRIBA -->
 <div class="card">
 <h1>🚀 Fuente Oficial y Aviso de Distribución</h1>
 
@@ -176,53 +152,60 @@ Aquí encontrarás acceso a cursos, software, diplomados y contenido exclusivo r
 
 🚀Confirma tu Suscripción en el canal de 𝗬𝗢𝗨𝗧𝗨𝗕𝗘 y Reclama acceso a los archivos de instalación ahora con el administrador aquí abajo.🚀<br><br>
 
-🚀 Confirma tu suscripción y reclama acceso con el administrador.
+📌Estos archivos educativos y software se comparten para mejorar tus conocimientos.<br><br>
+
+Se recomienda el uso de versiones oficiales para apoyar a los autores.<br><br>
 </p>
 </div>
 
+<!-- GRID -->
 <div class="card">
 <div class="grid">
 
+<!-- PRIMERA COLUMNA -->
 <div class="links-box">
   <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank">📢 Ingreso Directo</a>
   <a href="http://t.me/engineeringeyes_bot" target="_blank">📢 Administrador Oficial</a>
   <a href="http://t.me/engineeringeyes_bot" target="_blank">🌐 Sitio Oficial</a>
 </div>
 
+<!-- GEO5 + REVIT -->
 <div>
 
-<div class="group">
-  <div class="btn" onclick="toggleMenu('geo')">📢 Geo5</div>
-  <div id="geo" class="submenu">
-    <a href="https://go.hotmart.com/U102298220W" target="_blank" class="subbtn">Geo5 2025</a>
-    <a href="https://go.hotmart.com/E105551013D?dp=1" target="_blank" class="subbtn">Geo5 2026</a>
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('geo')">📁 Geo5</div>
+    <div id="geo" class="submenu">
+      <a href="https://go.hotmart.com/U102298220W" target="_blank" class="subbtn">Geo5 2025</a>
+      <a href="https://go.hotmart.com/E105551013D?dp=1" target="_blank" class="subbtn">Geo5 2026</a>
+    </div>
   </div>
-</div>
 
-<div class="group">
-  <div class="btn" onclick="toggleMenu('revit')">📢 Revit</div>
-  <div id="revit" class="submenu">
-    <a href="#" class="subbtn">Revit 2025</a>
-    <a href="#" class="subbtn">Revit 2026</a>
-    <a href="#" class="subbtn">Revit 2027</a>
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('revit')">📁 Revit</div>
+    <div id="revit" class="submenu">
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2025</a>
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2026</a>
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2027</a>
+    </div>
   </div>
-</div>
 
 </div>
 
+<!-- ETABS -->
 <div>
-  <div class="btn" onclick="toggleMenu('etabs')">📢 ETABS</div>
+  <div class="btn" onclick="toggleMenu('etabs')">📁 ETABS</div>
   <div id="etabs" class="submenu">
-    <a href="#" class="subbtn">ETABS 22</a>
-    <a href="#" class="subbtn">ETABS 23</a>
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">ETABS 22</a>
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">ETABS 23</a>
   </div>
 </div>
 
+<!-- CYPECAD -->
 <div>
-  <div class="btn" onclick="toggleMenu('cype')">📢 Cypecad</div>
+  <div class="btn" onclick="toggleMenu('cype')">📁 Cypecad</div>
   <div id="cype" class="submenu">
-    <a href="#" class="subbtn">Cypecad 2019</a>
-    <a href="#" class="subbtn">Cypecad 2026.c</a>
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Cypecad 2019</a>
+    <a href="https://go.hotmart.com/T103068841P?dp=1" target="_blank" class="subbtn">Cypecad 2026.c</a>
   </div>
 </div>
 
