@@ -48,7 +48,7 @@ body{
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap:15px;
   text-align:left;
 }
@@ -72,8 +72,17 @@ body{
 /* SUBMENU */
 .submenu{
   max-height:0;
-  overflow:hidden;
+  overflow-y:auto;
+  overflow-x:hidden;
   transition:0.3s ease;
+}
+.submenu::-webkit-scrollbar{
+  width:6px;
+}
+
+.submenu::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,0.2);
+  border-radius:10px;
 }
 
 /* SUBBOTONES */
@@ -156,12 +165,23 @@ Aquí encontrarás acceso a cursos, software, diplomados y contenido exclusivo r
 
 Se recomienda el uso de versiones oficiales para apoyar a los autores.<br><br>
 </p>
+
+<!-- TEXTO LATERAL IZQUIERDO -->
+<div style="
+  text-align:left;
+  margin-top:15px;
+  font-size:18px;
+  color:white;
+  font-weight:600;
+">
+⚡ Acceso rápido a recursos y contenido exclusivo. DESPLIEGA Y ELIGE TU OPCIÓN. No olvides Suscribirte en Youtube, Gracias
+</div>
+
 </div>
 
 <!-- GRID -->
 <div class="card">
 <div class="grid">
-
 <!-- PRIMERA COLUMNA -->
 <div class="links-box">
   <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank">📢 Ingreso Directo</a>
@@ -169,7 +189,7 @@ Se recomienda el uso de versiones oficiales para apoyar a los autores.<br><br>
   <a href="http://t.me/engineeringeyes_bot" target="_blank">🌐 Sitio Oficial</a>
 </div>
 
-<!-- GEO5 + REVIT -->
+<!-- GEO5 + Autodesk Software -->
 <div>
 
   <div class="group">
@@ -180,44 +200,231 @@ Se recomienda el uso de versiones oficiales para apoyar a los autores.<br><br>
     </div>
   </div>
 
-  <div class="group">
-    <div class="btn" onclick="toggleMenu('revit')">📁 Revit</div>
-    <div id="revit" class="submenu">
-      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2025</a>
-      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2026</a>
-      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Revit 2027</a>
+<div class="group"> 
+
+  <div class="btn" onclick="toggleMenu('autodesk')">
+    📁 Autodesk Software
+  </div> 
+
+  <div id="autodesk" class="submenu">
+
+<div class="subbtn"
+onclick="toggleMenu('revitsoft')"
+onmouseover="this.style.background='rgba(0,140,255,0.15)';this.style.boxShadow='0 0 10px rgba(0,140,255,0.3)'"
+onmouseout="this.style.background='rgba(255,255,255,0.03)';this.style.boxShadow='none'"
+style="
+  font-size:13px;
+  padding:8px;
+  margin-left:10px;
+  background:rgba(255,255,255,0.03);
+  cursor:pointer;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+">
+  📂 Revit
+</div>
+
+<div id="revitsoft" class="submenu">
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn" style="
+  font-size:12px;
+  padding:7px;
+  margin-left:20px;
+">
+    ➢ Revit 2025
+  </a>
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn" style="
+  font-size:12px;
+  padding:7px;
+  margin-left:20px;
+">
+    ➢ Revit 2026
+  </a>
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn" style="
+  font-size:12px;
+  padding:7px;
+  margin-left:20px;
+">
+    ➢ Revit 2027
+  </a>
+
+</div>
+
+<div class="subbtn"
+onclick="toggleMenu('autocadsoft')"
+onmouseover="this.style.background='rgba(0,140,255,0.15)';this.style.boxShadow='0 0 10px rgba(0,140,255,0.3)'"
+onmouseout="this.style.background='rgba(255,255,255,0.03)';this.style.boxShadow='none'"
+style="
+  font-size:13px;
+  padding:8px;
+  margin-left:10px;
+  background:rgba(255,255,255,0.03);
+  cursor:pointer;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+">
+  📂 AutoCAD
+</div>
+
+<div id="autocadsoft" class="submenu">
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank"
+     class="subbtn"
+     style="
+       font-size:12px;
+       padding:7px;
+       margin-left:20px;
+     ">
+    AutoCAD 2023
+  </a>
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank"
+     class="subbtn"
+     style="
+       font-size:12px;
+       padding:7px;
+       margin-left:20px;
+     ">
+    AutoCAD 2024
+  </a>
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank"
+     class="subbtn"
+     style="
+       font-size:12px;
+       padding:7px;
+       margin-left:20px;
+     ">
+    AutoCAD 2025
+  </a>
+
+</div>
+
+<div class="subbtn"
+onclick="toggleMenu('civilsoft')"
+onmouseover="this.style.background='rgba(0,140,255,0.15)';this.style.boxShadow='0 0 10px rgba(0,140,255,0.3)'"
+onmouseout="this.style.background='rgba(255,255,255,0.03)';this.style.boxShadow='none'"
+style="
+  font-size:13px;
+  padding:8px;
+  margin-left:10px;
+  background:rgba(255,255,255,0.03);
+  cursor:pointer;
+  transition:0.25s;
+  border:1px solid rgba(255,255,255,0.08);
+">
+  📂 Civil 3D
+</div>
+
+<div id="civilsoft" class="submenu">
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank"
+     class="subbtn"
+     style="
+       font-size:12px;
+       padding:7px;
+       margin-left:20px;
+     ">
+    Civil 3D 2023
+  </a>
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank"
+     class="subbtn"
+     style="
+       font-size:12px;
+       padding:7px;
+       margin-left:20px;
+     ">
+    Civil 3D 2024
+  </a>
+
+  <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank"
+     class="subbtn"
+     style="
+       font-size:12px;
+       padding:7px;
+       margin-left:20px;
+     ">
+    Civil 3D 2025
+  </a>
+
+</div>
     </div>
   </div>
 
 </div>
-
-<!-- ETABS -->
+<!-- CSI Software -->
 <div>
-  <div class="btn" onclick="toggleMenu('etabs')">📁 ETABS</div>
+  <div class="btn" onclick="toggleMenu('etabs')">📁 CSI Software</div>
   <div id="etabs" class="submenu">
     <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">ETABS 22</a>
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">SAFE 22</a>
+    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">SAP2000</a>
     <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">ETABS 23</a>
   </div>
 </div>
 
-<!-- CYPECAD -->
+<!-- CYPECAD + MICROSOFT OFFICE -->
 <div>
-  <div class="btn" onclick="toggleMenu('cype')">📁 Cypecad</div>
-  <div id="cype" class="submenu">
-    <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Cypecad 2019</a>
-    <a href="https://go.hotmart.com/T103068841P?dp=1" target="_blank" class="subbtn">Cypecad 2026.c</a>
+
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('cype')">📁 Cypecad</div>
+
+    <div id="cype" class="submenu">
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Cypecad 2019</a>
+
+      <a href="https://go.hotmart.com/T103068841P?dp=1" target="_blank" class="subbtn">Cypecad 2026.c</a>
+    </div>
   </div>
-</div>
+
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('office')">📁 Microsoft Office</div>
+
+    <div id="office" class="submenu">
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Office 2019</a>
+
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Office 2021</a>
+
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Office 365</a>
+    </div>
+  </div>
 
 </div>
-</div>
+<!-- PLANTILLAS -->
+<div>
+
+  <div class="group">
+    <div class="btn" onclick="toggleMenu('plantillas')">📁 Plantillas</div>
+
+    <div id="plantillas" class="submenu">
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Plantillas Excel</a>
+
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Plantillas AutoCAD</a>
+
+      <a href="https://t.me/+xT9picqsAUI5MDAx" target="_blank" class="subbtn">Plantillas Revit</a>
+    </div>
+  </div>
 
 </div>
-
 <script>
 function toggleMenu(id){
   let menu = document.getElementById(id);
-  menu.style.maxHeight = menu.style.maxHeight ? null : menu.scrollHeight + "px";
+
+  if(menu.style.maxHeight){
+    menu.style.maxHeight = null;
+  } else {
+    menu.style.maxHeight = "220px";
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.submenu').forEach(sub => {
+      if(sub.style.maxHeight){
+        sub.style.maxHeight = "220px";
+      }
+    });
+  }, 50);
 }
 </script>
 
